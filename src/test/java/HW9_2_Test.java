@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 public class HW9_2_Test {
@@ -9,6 +10,8 @@ public class HW9_2_Test {
      * Expected Result = {590, 985, 68}
      *
      */
+
+    @Order(1)
     @Test
     public void testHW9_2_HappyPath() {
 
@@ -17,6 +20,22 @@ public class HW9_2_Test {
 //        int step = 1;
         int[] expected = {590, 985, 68};
         int[] array = {-45, 590, 234, 985, 12, 68};
+
+        HW9_2 oi = new HW9_2();
+        int[] actual = oi.OddIndices(array);
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Order(2)
+    @Test
+    public void testHW9_2_Negative() {
+
+//        int start = -45;
+//        int end = 68;
+//        int step = 1;
+        int[] expected = {};
+        int[] array = {};
 
         HW9_2 oi = new HW9_2();
         int[] actual = oi.OddIndices(array);

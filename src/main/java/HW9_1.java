@@ -15,7 +15,7 @@ public class HW9_1 {
         if (a % 2 != 0) {
 
             return "Odd";
-        } if (a % 2 == 0 && a > -2147483647) {
+        } if (a % 2 == 0 && a > -2147483648) {
 
                 return "Even";
             } else {

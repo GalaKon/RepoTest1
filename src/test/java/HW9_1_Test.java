@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 public class HW9_1_Test {
@@ -18,6 +19,7 @@ public class HW9_1_Test {
      * 2147483647 + 1 →  “Undefined”
      */
 
+    @Order(1)
     @Test
     public void testHW9HappyPathOdd() {
 
@@ -30,6 +32,7 @@ public class HW9_1_Test {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Order(2)
     @Test
     public void testHW9HappyPathEvenFirst() {
 
@@ -42,6 +45,7 @@ public class HW9_1_Test {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Order(3)
     @Test
     public void testHW9HappyPathEvenSecond() {
 
@@ -54,6 +58,7 @@ public class HW9_1_Test {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Order(4)
     @Test
     public void testHW9HappyPathUndefined() {
 
@@ -66,11 +71,12 @@ public class HW9_1_Test {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Order(5)
     @Test
     public void testHW9Negative() {
 
         int a = -2147483648;
-        String expected = " ";
+        String expected = "Undefined";
 
         HW9_1 oe = new HW9_1();
         String actual = oe.OddEven(a);
