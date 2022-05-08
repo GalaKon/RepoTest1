@@ -8,9 +8,22 @@ public class HW9_7 {
      * If M doesn't satisfy any of the above conditions then return "-1"
      */
 
-//    public () {
-//
-//
-//
-//    }
+    public String numberM(int m) {
+
+        if (m % 3 == 0 && m % 5 == 0) {
+
+            return "Good Number";
+        } else if (m % 3 == 0 && m % 5 != 0) {
+
+            return "Bad Number";
+        } else if (m % 3 != 0 && m % 5 == 0) {
+
+            return "Poor Number";
+        } else if (m % 3 != 0 && m % 5 != 0) {
+
+            return "-1";
+        }
+
+        return " ";
+    }
 }
